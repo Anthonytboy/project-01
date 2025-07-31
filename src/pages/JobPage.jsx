@@ -112,10 +112,12 @@ const JobPage = ({ deleteJob }) => {
   );
 };
 
+const API_URL = 'https://react-web-jobs.onrender.com/jobs';
+
 const jobLoader = async ({ params }) => {
-  const res = await fetch(`/api/jobs/${params.id}`);
+  const res = await fetch(`${API_URL}/${params.id}`);
   const data = await res.json();
   return data;
 };
 
-export { JobPage as default, jobLoader };
+export { JobPage as default, jobLoader};
