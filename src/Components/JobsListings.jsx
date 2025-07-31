@@ -2,13 +2,15 @@ import JobCard from './JobCard';
 import { useState, useEffect } from 'react';
 import Spinner from './Spinner';
 
+const API_URL = 'https://react-web-jobs.onrender.com/jobs';
+
 const JobsListings = ({ isHome = false }) => {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchJObs = async () => {
-      const apiUrl = isHome ? '${API?_limit=3' : '/api/jobs';
+      const apiUrl = isHome ? `${API_URL}?_limit=3` : `${API_URL}`;
 
       try {
         const res = await fetch(apiUrl);
