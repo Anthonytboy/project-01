@@ -7,12 +7,12 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     port: 3000,
-    proxy: {
-      '/api': {
-        target: 'https://react-web-jobs.onrender.com/jobs',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
+    // proxy: {
+    //   '/api': {
+    //     target: 'https://react-web-jobs.onrender.com/jobs',
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api/, '')
+    //   }
+    // }
   }
 })
