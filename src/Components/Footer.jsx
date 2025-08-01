@@ -6,9 +6,12 @@ const Footer = () => {
       <footer className="bg-indigo-700 border-b border-indigo-500 sticky bottom-0">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-center">
-            <p className="text-white text-2xl font-bold">
-              &copy; React 2025 Anthony
-            </p>
+            <div className="text-white text-md text-center font-bold">
+              &copy; React 2025{' '}
+              <p>
+                {new Date().toLocaleDateString('en-NG', { weekday: 'long' })}
+              </p>
+            </div>
           </div>
         </div>
       </footer>
