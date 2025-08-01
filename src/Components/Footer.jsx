@@ -9,7 +9,13 @@ const Footer = () => {
             <div className="text-white text-md text-center font-bold">
               &copy; React 2025{' '}
               <p>
-                {new Date().toLocaleDateString('en-NG', { weekday: 'long' })}
+                {new Date().toLocaleDateString('en-NG', {
+                  weekday: 'long',
+                  day: 'numeric',
+                  month: 'short',
+                  year: 'numeric'
+
+                 })}
               </p>
             </div>
           </div>
