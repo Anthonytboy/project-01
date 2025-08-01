@@ -7,15 +7,13 @@ const Footer = () => {
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-center">
             <div className="text-white text-md text-center font-bold">
-              &copy; React 2025{' '}
-              <p>
+              &copy; React
+              <p className="hover:text-orange-500">
                 {new Date().toLocaleDateString('en-NG', {
                   weekday: 'long',
                   day: 'numeric',
-                  month: 'short',
-                  year: 'numeric'
-
-                 })}
+                  year: 'numeric',
+                })}
               </p>
             </div>
           </div>
